@@ -67,6 +67,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Demos\Crashes\SimpleCrash.cs" />
+    <Compile Include="Demos\Files\ReadOneFile.cs" />
     <Compile Include="Demos\PerformanceCountersConsume\PerformanceCountersConsume.cs" />
     <Compile Include="Demos\PerformanceCountersThreeCpuThreads\PerformanceCountersThreeCPUThreads.cs" />
     <Compile Include="DemoBase.cs" />
