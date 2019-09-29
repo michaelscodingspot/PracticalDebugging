@@ -25,7 +25,23 @@ namespace PracticalDebugingDemos
             set { _content = value; OnPropertyChanged();}
         }
 
-        //protected TextB
+        protected void AppendTextToContent(object text)
+        {
+            if (Content == null)
+                Content = "";
+            Content = (string)Content + "\n" + text.ToString();
+            
+        }
+
+        protected void AppendTextToContent(string format, object arg0)
+        {
+            AppendTextToContent(string.Format(format, arg0));
+        }
+
+        protected void AppendTextToContent(string format, object arg0, object arg1)
+        {
+            AppendTextToContent(string.Format(format, arg0, arg1));
+        }
 
 
         public abstract void Start();

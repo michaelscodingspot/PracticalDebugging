@@ -30,7 +30,9 @@
             </StackPanel>
 
         </Grid>
-        <ContentControl Content="{Binding Content}" Grid.Row="1"></ContentControl>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.Row="1">
+            <ContentControl DataContext="{Binding ActiveDemo}" Content="{Binding Content}" ></ContentControl>
+        </ScrollViewer>
         
     </Grid>
 </Window>

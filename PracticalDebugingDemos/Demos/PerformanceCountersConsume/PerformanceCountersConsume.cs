@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace PracticalDebugingDemos.Demos.PerformanceCountersThreeCPUThreads.PerformanceCountersConsume
 {
@@ -17,7 +18,7 @@ namespace PracticalDebugingDemos.Demos.PerformanceCountersThreeCPUThreads.Perfor
             //CreateCustomCounter();
         }
 
-        private static void ConsumeCounters()
+        private void ConsumeCounters()
         {
             var currentProcess = Process.GetCurrentProcess().ProcessName;
             PerformanceCounter privateBytes =
@@ -27,9 +28,11 @@ namespace PracticalDebugingDemos.Demos.PerformanceCountersThreeCPUThreads.Perfor
 
             Debug.WriteLine("private bytes = " + privateBytes.NextValue());
             Debug.WriteLine("gen 2 collections = " + gen2Collections.NextValue());
+
+            Content = "private bytes = " + privateBytes.NextValue() + "\n" + "gen 2 collections = " + gen2Collections.NextValue();
         }
 
-        private static void CreateCustomCounter()
+        private void CreateCustomCounter()
         {
             bool exists = PerformanceCounterCategory.Exists("MyTimeCategory");
             if (!exists)

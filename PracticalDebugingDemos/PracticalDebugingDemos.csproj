@@ -68,6 +68,11 @@
     </Compile>
     <Compile Include="Demos\Crashes\SimpleCrash.cs" />
     <Compile Include="Demos\Files\ReadOneFile.cs" />
+    <Compile Include="Demos\Memory\EndlessMemory2.cs" />
+    <Compile Include="Demos\Memory\EndlessMemory.cs" />
+    <Compile Include="Demos\Memory\MemoryExceeds2GB.cs" />
+    <Compile Include="Demos\Memory\StockMarketMemoryLeak.cs" />
+    <Compile Include="Demos\Memory\StringBuilderOutOfMemory.cs" />
     <Compile Include="Demos\PerformanceCountersConsume\PerformanceCountersConsume.cs" />
     <Compile Include="Demos\PerformanceCountersThreeCpuThreads\PerformanceCountersThreeCPUThreads.cs" />
     <Compile Include="DemoBase.cs" />

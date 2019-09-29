@@ -30,13 +30,23 @@ namespace PracticalDebugingDemos
                 OnPropertyChanged();
             }
         }
-
-        public object _content;
-        public object Content
+        DemoBase _activeDemo;
+        public DemoBase ActiveDemo
         {
-            get { return _content; }
-            set { _content = value; OnPropertyChanged(); }
+            get { return _activeDemo; }
+            set
+            {
+                _activeDemo = value;
+                OnPropertyChanged();
+            }
         }
+
+        //public object _content;
+        //public object Content
+        //{
+        //    get { return _content; }
+        //    set { _content = value; OnPropertyChanged(); }
+        //}
 
         public ICommand _goCommand;
         public ICommand GoCommand
@@ -48,6 +58,7 @@ namespace PracticalDebugingDemos
                     _goCommand = new DelegateCommand(() =>
                     {
                         SelectedDemo.Start();
+                        ActiveDemo = SelectedDemo;
                     });
                 }
                 return _goCommand;
