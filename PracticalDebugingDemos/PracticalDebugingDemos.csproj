@@ -73,6 +73,8 @@
     <Compile Include="Demos\Memory\MemoryExceeds2GB.cs" />
     <Compile Include="Demos\Memory\StockMarketMemoryLeak.cs" />
     <Compile Include="Demos\Memory\StringBuilderOutOfMemory.cs" />
+    <Compile Include="Demos\Memory\TimerMemoryLeak.cs" />
+    <Compile Include="Demos\Misc\Break.cs" />
     <Compile Include="Demos\PerformanceCountersConsume\PerformanceCountersConsume.cs" />
     <Compile Include="Demos\PerformanceCountersThreeCpuThreads\PerformanceCountersThreeCPUThreads.cs" />
     <Compile Include="DemoBase.cs" />

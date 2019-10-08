@@ -25,7 +25,7 @@ namespace PracticalDebugingDemos
             set { _content = value; OnPropertyChanged();}
         }
 
-        protected void AppendTextToContent(object text)
+        public void AppendTextToContent(object text)
         {
             if (Content == null)
                 Content = "";
@@ -33,12 +33,12 @@ namespace PracticalDebugingDemos
             
         }
 
-        protected void AppendTextToContent(string format, object arg0)
+        public void AppendTextToContent(string format, object arg0)
         {
             AppendTextToContent(string.Format(format, arg0));
         }
 
-        protected void AppendTextToContent(string format, object arg0, object arg1)
+        public void AppendTextToContent(string format, object arg0, object arg1)
         {
             AppendTextToContent(string.Format(format, arg0, arg1));
         }
