@@ -15,8 +15,15 @@ namespace PracticalDebugingDemos
         protected string GetCaptionFromClassName()
         {
             var str = this.GetType().Name;
+            return CamelCaseToFriendlyString(str);
+        }
+
+        private static string CamelCaseToFriendlyString(string str)
+        {
             return Regex.Replace(str, "[a-z][A-Z]", m => $"{m.Value[0]} {char.ToLower(m.Value[1])}");
         }
+
+        public string Category => CamelCaseToFriendlyString(this.GetType().Namespace.Split('.').Last());
 
         private object _content;
         public object Content

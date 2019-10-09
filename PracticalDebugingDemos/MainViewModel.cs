@@ -6,6 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Data;
 using System.Windows.Input;
 using MVVMC;
 
@@ -14,6 +15,19 @@ namespace PracticalDebugingDemos
     public class MainViewModel : MVVMC.BaseViewModel
     {
         public ObservableCollection<DemoBase> Demos { get;  } = new ObservableCollection<DemoBase>();
+        public ListCollectionView _allDemos;
+
+        public ListCollectionView AllDemos
+        {
+            get { return _allDemos; }
+            set
+            {
+                _allDemos = value;
+                OnPropertyChanged();
+            }
+        }
+
+
 
         public MainViewModel()
         {
@@ -72,8 +86,11 @@ namespace PracticalDebugingDemos
             foreach (var demo in demos)
             {
                 Demos.Add(Activator.CreateInstance(demo) as DemoBase);
-
             }
+
+            AllDemos = new ListCollectionView(Demos);
+            AllDemos.GroupDescriptions.Add(new PropertyGroupDescription(nameof(DemoBase.Category)));
         }
+
     }
 }

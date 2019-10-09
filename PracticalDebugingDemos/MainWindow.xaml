@@ -16,13 +16,22 @@
         <Grid Background="Beige" >
             <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center">
                 <TextBlock Margin="5" VerticalAlignment="Center">Choose: </TextBlock>
-                <ComboBox Margin="5" ItemsSource="{Binding Demos, Mode=OneWay}" 
+                <ComboBox Margin="5" ItemsSource="{Binding AllDemos, Mode=OneWay}" 
                           Text="Choose a Demo..."
                           Focusable="False" IsEditable="True" IsReadOnly="True"
                           SelectedItem="{Binding SelectedDemo}">
+                    <ComboBox.GroupStyle>
+                        <GroupStyle>
+                            <GroupStyle.HeaderTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name}"/>
+                                </DataTemplate>
+                            </GroupStyle.HeaderTemplate>
+                        </GroupStyle>
+                    </ComboBox.GroupStyle>
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding Caption, Mode=OneTime}"></TextBlock>
+                            <TextBlock Text="{Binding Caption}"/>
                         </DataTemplate>
                     </ComboBox.ItemTemplate>
                 </ComboBox>
