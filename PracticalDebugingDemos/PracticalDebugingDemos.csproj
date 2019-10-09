@@ -72,6 +72,7 @@
     <Compile Include="Demos\Memory\EndlessMemory.cs" />
     <Compile Include="Demos\Memory\MemoryExceeds2GB.cs" />
     <Compile Include="Demos\Memory\StockMarketMemoryLeak.cs" />
+    <Compile Include="Demos\Memory\StringBuilderFewStrings.cs" />
     <Compile Include="Demos\Memory\StringBuilderOutOfMemory.cs" />
     <Compile Include="Demos\Memory\TimerMemoryLeak.cs" />
     <Compile Include="Demos\Misc\Break.cs" />
