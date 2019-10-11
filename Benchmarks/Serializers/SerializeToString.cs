@@ -24,7 +24,7 @@ namespace Benchmarks.Serializers
         }
 
         [Benchmark]
-        public string SystemTextJson()
+        public string RunSystemTextJson()
         {
             return JsonSerializer.Serialize(_instance);
         }
@@ -42,10 +42,6 @@ namespace Benchmarks.Serializers
             {
                 _dataContractJsonSerializer.WriteObject(stream1, _instance);
                 stream1.Position = 0;
-
-                // deserialize:
-                //var p2 = (Customer)_dataContractJsonSerializer.ReadObject(stream1);  
-
                 using var sr = new StreamReader(stream1);
                 return sr.ReadToEnd();
             }

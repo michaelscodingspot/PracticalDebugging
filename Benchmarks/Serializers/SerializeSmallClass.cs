@@ -11,88 +11,88 @@ using SST = ServiceStack.Text;
 
 namespace Benchmarks.Serializers
 {
-    public class SerializeCustomer
-    {
-        [DataContract]  
-        class Customer
-        {
-            [DataMember]
-            public DateTime DateOfBirth { get; set; }
-            [DataMember]
-            public string FirstName { get; set; }
-            [DataMember]
-            public string LastName { get; set; }
-            [DataMember]
-            public int NumPurchases { get; set; }
-        }
+    //public class SerializeCustomer
+    //{
+    //    [DataContract]  
+    //    class Customer
+    //    {
+    //        [DataMember]
+    //        public DateTime DateOfBirth { get; set; }
+    //        [DataMember]
+    //        public string FirstName { get; set; }
+    //        [DataMember]
+    //        public string LastName { get; set; }
+    //        [DataMember]
+    //        public int NumPurchases { get; set; }
+    //    }
 
-        private Customer _customer;
+    //    private Customer _customer;
 
-        [GlobalSetup]
-        public void Setup()
-        {
-            _customer = new Customer()
-            {
-                DateOfBirth = new DateTime(1955, 10, 28),
-                FirstName = "Bill",
-                LastName = "Gates",
-                NumPurchases = 1521
-            };
-        }
+    //    [GlobalSetup]
+    //    public void Setup()
+    //    {
+    //        _customer = new Customer()
+    //        {
+    //            DateOfBirth = new DateTime(1955, 10, 28),
+    //            FirstName = "Bill",
+    //            LastName = "Gates",
+    //            NumPurchases = 1521
+    //        };
+    //    }
 
-        [Benchmark]
-        public string SystemTextJson()
-        {
-            return JsonSerializer.Serialize(_customer);
-        }
+    //    [Benchmark]
+    //    public string SystemTextJson()
+    //    {
+    //        return JsonSerializer.Serialize(_customer);
+    //    }
 
-        [Benchmark]
-        public string Newtonsoft()
-        {
-            return JsonConvert.SerializeObject(_customer);
-        }
+    //    [Benchmark]
+    //    public string Newtonsoft()
+    //    {
+    //        return JsonConvert.SerializeObject(_customer);
+    //    }
 
-        [Benchmark]
-        public string DataContractJsonSerializer()
-        {
-            using (MemoryStream stream1 = new MemoryStream())
-            {
-                DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Customer));
-                //TODO: Possibly change MemoryStream to StringWriter for performance
-                ser.WriteObject(stream1, _customer);
-                stream1.Position = 0;
+    //    [Benchmark]
+    //    public string DataContractJsonSerializer()
+    //    {
+    //        using (MemoryStream stream1 = new MemoryStream())
+    //        {
+    //            DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Customer));
+    //            //TODO: Possibly change MemoryStream to StringWriter for performance
+    //            ser.WriteObject(stream1, _customer);
+    //            stream1.Position = 0;
 
-                // deserialize:
-                //var p2 = (Customer)ser.ReadObject(stream1);  
+    //            // deserialize:
+    //            //var p2 = (Customer)ser.ReadObject(stream1);  
 
-                using var sr = new StreamReader(stream1);
-                return sr.ReadToEnd();
-            }
-        }
+    //            using var sr = new StreamReader(stream1);
+    //            return sr.ReadToEnd();
+    //        }
+    //    }
 
-        [Benchmark]
-        public string Jil()
-        {
-            using var output = new StringWriter();
-            JSON.Serialize(
-                _customer,
-                output
-            );
-            return output.ToString();
-        }
+    //    [Benchmark]
+    //    public string Jil()
+    //    {
+    //        using var output = new StringWriter();
+    //        JSON.Serialize(
+    //            _customer,
+    //            output
+    //        );
+    //        return output.ToString();
+    //    }
 
-        [Benchmark]
-        public string Utf8Json()
-        {
-            return JsonSerializer.Serialize(_customer); //.ToJsonString(_customer);
-        }
+    //    [Benchmark]
+    //    public string Utf8Json()
+    //    {
+    //        return JsonSerializer.Serialize(_customer); //.ToJsonString(_customer);
+    //    }
 
-        [Benchmark]
-        public string ServiceStack()
-        {
-            return SST.JsonSerializer.SerializeToString(_customer);
-        }
+    //    [Benchmark]
+    //    public string ServiceStack()
+    //    {
+    //        return SST.JsonSerializer.SerializeToString(_customer);
+    //    }
 
         
-    }
+    //}
 }

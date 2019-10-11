@@ -15,24 +15,31 @@ namespace Benchmarks
             //BenchmarkRunner.Run<SerializeCustomer>();
             //BenchmarkRunner.Run<SerializeToString<Models.SmallClass>>();
             //BenchmarkRunner.Run<SerializeToStream<Models.SmallClass>>();
+            BenchmarkRunner.Run<SerializeToString<Models.Customer>>();
 
-            var x = new SerializeToStream<Models.SmallClass>();
-            x.Setup();
-            x.RunServiceStack();
-            var memoryStream = x.GetMemoryStream();
-            x.GetStreamWriter().Flush();
+            //var x = new SerializeToStream<Models.SmallClass>();
+            //x.Setup();
+            //x.RunServiceStack();
+            //var memoryStream = x.GetMemoryStream();
+            //x.GetStreamWriter().Flush();
 
-            memoryStream.Position = 0;
-            using var sr = new StreamReader(memoryStream);
-            var res = sr.ReadToEnd();
+            //memoryStream.Position = 0;
+            //using var sr = new StreamReader(memoryStream);
+            //var res = sr.ReadToEnd();
+
+
             //var x = new SerializeToString<Models.SmallClass>();
             //x.Setup();
-            //var s1 = x.SystemTextJson();
+            //var s1 = x.RunSystemTextJson();
             //var s2 = x.RunNewtonsoft();
             //var s3 = x.RunDataContractJsonSerializer(); //with UTC
             //var s4 = x.RunJil();
             //var s5 = x.RunUtf8Json(); //same output as newtonsoft 
             //var s6 = x.RunServiceStack();// with wrong UTC 0000
+
+            //var x = new DeserializeFromString<Models.SmallClass>();
+            //x.ServiceStackSetup();
+            //var y = x.RunServiceStack();
         }
     }
 }
