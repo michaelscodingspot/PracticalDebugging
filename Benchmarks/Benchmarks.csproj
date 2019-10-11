@@ -1,12 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="BenchmarkDotNet" Version="0.11.5" />
+    <PackageReference Include="Jil" Version="2.17.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="ServiceStack.Text" Version="5.7.0" />
+    <PackageReference Include="Utf8Json" Version="1.3.7" />
+    <PackageReference Include="Utf8Json.AspNetCoreMvcFormatter" Version="1.3.7" />
+    <PackageReference Include="Utf8Json.ImmutableCollection" Version="1.3.7" />
+    <PackageReference Include="Utf8Json.UnityShims" Version="1.3.7" />
   </ItemGroup>
 
 </Project>
