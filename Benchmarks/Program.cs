@@ -14,18 +14,20 @@ namespace Benchmarks
             //BenchmarkRunner.Run<StringBuilderManyStrings>();
             //BenchmarkRunner.Run<SerializeCustomer>();
             //BenchmarkRunner.Run<SerializeToString<Models.SmallClass>>();
-            //BenchmarkRunner.Run<SerializeToStream<Models.SmallClass>>();
-            BenchmarkRunner.Run<SerializeToString<Models.Customer>>();
+            //BenchmarkRunner.Run<SerializeToString<Models.ThousandSmallClassDictionary>>();
+            //BenchmarkRunner.Run<SerializeToStream<Models.ThousandSmallClassDictionary>>();
+            BenchmarkRunner.Run<DeserializeFromString<Models.ThousandSmallClassDictionary>>();
 
             //var x = new SerializeToStream<Models.SmallClass>();
             //x.Setup();
-            //x.RunServiceStack();
+            //x.RunSystemTextJson();
             //var memoryStream = x.GetMemoryStream();
             //x.GetStreamWriter().Flush();
 
             //memoryStream.Position = 0;
             //using var sr = new StreamReader(memoryStream);
             //var res = sr.ReadToEnd();
+            //Console.WriteLine(res);
 
 
             //var x = new SerializeToString<Models.SmallClass>();

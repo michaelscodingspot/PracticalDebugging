@@ -10,7 +10,7 @@ using SST = ServiceStack.Text;
 
 namespace Benchmarks.Serializers
 {
-    public class DeserializeFromString<T> where  T : new()
+    public class DeserializeFromString<T> where  T : class, new()
     {
 
         private T _instance;

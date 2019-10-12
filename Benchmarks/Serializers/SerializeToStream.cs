@@ -46,7 +46,7 @@ namespace Benchmarks.Serializers
         }
 
         [Benchmark]
-        public void SystemTextJson()
+        public void RunSystemTextJson()
         {
             _memoryStream.Position = 0;
             JsonSerializer.Serialize(_utf8JsonWriter, _instance);
@@ -66,6 +66,12 @@ namespace Benchmarks.Serializers
             _dataContractJsonSerializer.WriteObject(_memoryStream, _instance);
         }
 
+        [GlobalSetup(Target = nameof(RunJil))]
+        public void JilSetup()
+        {
+            Setup();
+            RunJil();
+        }
         [Benchmark]
         public void RunJil()
         {
@@ -75,7 +81,6 @@ namespace Benchmarks.Serializers
                 _instance,
                 _streamWriter
             );
-            //_streamWriter.Flush();
         }
 
         [Benchmark]

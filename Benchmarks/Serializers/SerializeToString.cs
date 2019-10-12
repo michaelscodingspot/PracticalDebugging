@@ -10,7 +10,7 @@ using SST = ServiceStack.Text;
 
 namespace Benchmarks.Serializers
 {
-    public class SerializeToString<T> where  T : new()
+    public class SerializeToString<T> where  T : class, new()
     {
 
         private T _instance;
@@ -19,8 +19,8 @@ namespace Benchmarks.Serializers
         [GlobalSetup]
         public void Setup()
         {
-            _instance = new T();
-            _dataContractJsonSerializer = new DataContractJsonSerializer(typeof(T));
+            _instance = _instance ?? new T();
+            _dataContractJsonSerializer = _dataContractJsonSerializer ?? new DataContractJsonSerializer(typeof(T));
         }
 
         [Benchmark]
@@ -47,15 +47,16 @@ namespace Benchmarks.Serializers
             }
         }
 
+        [GlobalSetup(Target = nameof(RunJil))]
+        public void JilSetup()
+        {
+            Setup();
+            RunJil();
+        }
         [Benchmark]
         public string RunJil()
         {
-            using var output = new StringWriter();
-            Jil.JSON.Serialize(
-                _instance,
-                output
-            );
-            return output.ToString();
+            return Jil.JSON.Serialize(_instance);
         }
 
         [Benchmark]

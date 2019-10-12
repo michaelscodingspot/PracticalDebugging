@@ -34,8 +34,8 @@ namespace Benchmarks.Serializers
             public ThousandSmallClassDictionary()
             {
                 Dict = new Dictionary<string, SmallClass>(Enumerable.Range(0, ITEMS)
-                    .Select(x => new SmallClass())
-                    .Select(smClass => new KeyValuePair<string, SmallClass>(smClass.Name, smClass)));
+                    .Select(x => new { Num = x, Obj = new SmallClass()})
+                    .Select(anon => new KeyValuePair<string, SmallClass>(anon.Obj.Name + anon.Num.ToString(), anon.Obj)));
             }
         }
         
@@ -56,10 +56,10 @@ namespace Benchmarks.Serializers
             }
         }
 
-        // Customer
-        public class Customer
+        // BigClass
+        public class BigClass
         {
-            public Customer()
+            public BigClass()
             {
                 Id = 1;
                 ClubMembershipType = ClubMembershipTypes.Platinum;
@@ -150,6 +150,6 @@ namespace Benchmarks.Serializers
             public int ZipCode { get; set; }
             public string Country { get; set; }
         }
-        // -- end of Customer
+        // -- end of BigClass
     }
 }

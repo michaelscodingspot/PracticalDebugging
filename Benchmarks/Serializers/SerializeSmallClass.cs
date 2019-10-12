@@ -14,7 +14,7 @@ namespace Benchmarks.Serializers
     //public class SerializeCustomer
     //{
     //    [DataContract]  
-    //    class Customer
+    //    class BigClass
     //    {
     //        [DataMember]
     //        public DateTime DateOfBirth { get; set; }
@@ -26,12 +26,12 @@ namespace Benchmarks.Serializers
     //        public int NumPurchases { get; set; }
     //    }
 
-    //    private Customer _customer;
+    //    private BigClass _customer;
 
     //    [GlobalSetup]
     //    public void Setup()
     //    {
-    //        _customer = new Customer()
+    //        _customer = new BigClass()
     //        {
     //            DateOfBirth = new DateTime(1955, 10, 28),
     //            FirstName = "Bill",
@@ -41,7 +41,7 @@ namespace Benchmarks.Serializers
     //    }
 
     //    [Benchmark]
-    //    public string SystemTextJson()
+    //    public string RunSystemTextJson()
     //    {
     //        return JsonSerializer.Serialize(_customer);
     //    }
@@ -57,13 +57,13 @@ namespace Benchmarks.Serializers
     //    {
     //        using (MemoryStream stream1 = new MemoryStream())
     //        {
-    //            DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Customer));
+    //            DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(BigClass));
     //            //TODO: Possibly change MemoryStream to StringWriter for performance
     //            ser.WriteObject(stream1, _customer);
     //            stream1.Position = 0;
 
     //            // deserialize:
-    //            //var p2 = (Customer)ser.ReadObject(stream1);  
+    //            //var p2 = (BigClass)ser.ReadObject(stream1);  
 
     //            using var sr = new StreamReader(stream1);
     //            return sr.ReadToEnd();
