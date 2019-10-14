@@ -9,7 +9,7 @@ namespace Benchmarks
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             //BenchmarkRunner.Run<StringBuilderFewStrings>();
             //BenchmarkRunner.Run<StringBuilderManyStrings>();
@@ -18,7 +18,7 @@ namespace Benchmarks
             //BenchmarkRunner.Run<SerializeToString<Models.ThousandSmallClassDictionary>>();
             //BenchmarkRunner.Run<SerializeToStream<Models.ThousandSmallClassDictionary>>();
             //BenchmarkRunner.Run<DeserializeFromString<Models.ThousandSmallClassDictionary>>();
-            Task.Run(async () => await new RequestPerSecondClient().Run()).Wait();
+            await new RequestPerSecondClient().Run(false, false);
 
             //var x = new SerializeToStream<Models.SmallClass>();
             //x.Setup();

@@ -45,20 +45,7 @@ namespace BenchmarksServerDotNetCore3.Formatters
 
         public bool CanWriteResult(OutputFormatterCanWriteContext context) => true;
 
-        //public Task WriteAsync(OutputFormatterWriteContext context)
-        //{
-        //    if (!context.ContentTypeIsServerDefined)
-        //        context.HttpContext.Response.ContentType = "application/json";
-
-        //    if (context.ObjectType == typeof(object))
-        //    {
-        //        return JsonSerializer.NonGeneric.SerializeAsync(context.HttpContext.Response.Body, context.Object, _resolver);
-        //    }
-        //    else
-        //    {
-        //        return JsonSerializer.NonGeneric.SerializeAsync(context.ObjectType, context.HttpContext.Response.Body, context.Object, _resolver);
-        //    }
-        //}
+        
         public async Task WriteAsync(OutputFormatterWriteContext context)
         {
             if (!context.ContentTypeIsServerDefined)
