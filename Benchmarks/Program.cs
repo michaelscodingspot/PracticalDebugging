@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Threading.Tasks;
 using BenchmarkDotNet.Running;
 using Benchmarks.Memory;
 using Benchmarks.Serializers;
@@ -16,7 +17,8 @@ namespace Benchmarks
             //BenchmarkRunner.Run<SerializeToString<Models.SmallClass>>();
             //BenchmarkRunner.Run<SerializeToString<Models.ThousandSmallClassDictionary>>();
             //BenchmarkRunner.Run<SerializeToStream<Models.ThousandSmallClassDictionary>>();
-            BenchmarkRunner.Run<DeserializeFromString<Models.ThousandSmallClassDictionary>>();
+            //BenchmarkRunner.Run<DeserializeFromString<Models.ThousandSmallClassDictionary>>();
+            Task.Run(async () => await new RequestPerSecondClient().Run()).Wait();
 
             //var x = new SerializeToStream<Models.SmallClass>();
             //x.Setup();

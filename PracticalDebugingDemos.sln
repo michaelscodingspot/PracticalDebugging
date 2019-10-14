@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticalDebugingDemos", "PracticalDebugingDemos\PracticalDebugingDemos.csproj", "{3A0132C6-FB69-4403-BCE9-C592371DEA7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticalDebuggingWeb", "PracticalDebuggingWeb\PracticalDebuggingWeb.csproj", "{548832B4-08D3-4D7A-806A-FA0C90D47028}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticalDebuggingWeb", "PracticalDebuggingWeb\PracticalDebuggingWeb.csproj", "{548832B4-08D3-4D7A-806A-FA0C90D47028}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchmarks", "Benchmarks\Benchmarks.csproj", "{92BCA2A8-81C2-4572-8EE4-5244CEB2FA0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benchmarks", "Benchmarks\Benchmarks.csproj", "{92BCA2A8-81C2-4572-8EE4-5244CEB2FA0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarksServerDotNetCore3", "BenchmarksServerDotNetCore3\BenchmarksServerDotNetCore3.csproj", "{F4DE9B2D-9850-40DB-B25C-6771567D69A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{92BCA2A8-81C2-4572-8EE4-5244CEB2FA0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92BCA2A8-81C2-4572-8EE4-5244CEB2FA0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92BCA2A8-81C2-4572-8EE4-5244CEB2FA0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4DE9B2D-9850-40DB-B25C-6771567D69A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4DE9B2D-9850-40DB-B25C-6771567D69A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4DE9B2D-9850-40DB-B25C-6771567D69A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4DE9B2D-9850-40DB-B25C-6771567D69A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
