@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Benchmarks.Serializers
 {
@@ -14,21 +15,17 @@ namespace Benchmarks.Serializers
     {
         private const string HttpsLocalhost = "https://localhost:5001/";
 
-        public async Task Run(bool isSerialize, bool isUtf8Json)
+        public async Task Run(bool serialize, bool isUtf8Json)
         {
             await Task.Delay(TimeSpan.FromSeconds(5));
             
             var client = new HttpClient();
-            (Uri uri, bool serialize) = isSerialize ? SerializeThousandSmallClassList() : DeserializeThousandSmallClassList();
-            var serializer = new SerializeToString<Models.ThousandSmallClassList>();
-            serializer.Setup();
-
-            var json = isUtf8Json ? serializer.RunUtf8Json() : serializer.RunSystemTextJson();
+            var json = JsonConvert.SerializeObject(new Models.ThousandSmallClassList());
 
             // Warmup, just in case
             for (int i = 0; i < 100; i++)
             {
-                await DoRequest(json, client, uri, serialize);
+                await DoRequest(json, client, serialize);
             }
 
             int count = 0;
@@ -39,7 +36,7 @@ namespace Benchmarks.Serializers
             while (sw.Elapsed < TimeSpan.FromSeconds(1))
             {
                 Interlocked.Increment(ref count);
-                await DoRequest(json, client, uri, serialize);
+                await DoRequest(json, client, serialize);
             }
             
             Console.Beep(); 
@@ -48,30 +45,24 @@ namespace Benchmarks.Serializers
         }
 
         
-        private static (Uri, bool serialize) DeserializeThousandSmallClassList()
-            =>(new Uri(HttpsLocalhost + "mvc/DeserializeThousandSmallClassList"), false);
-        
-
-        private static (Uri, bool serialize) SerializeThousandSmallClassList() =>
-            (new Uri(HttpsLocalhost + "mvc/SerializeThousandSmallClassList"), true);
-        
-
-        private async Task DoRequest(string json, HttpClient client, Uri uri, bool serialize)
+        private async Task DoRequest(string json, HttpClient client, bool serialize)
         {
             if (serialize)
-                await DoSerializeRequest(client, uri);
+                await DoSerializeRequest(client);
             else
-                await DoDeserializeRequest(json, client, uri);
+                await DoDeserializeRequest(json, client);
         }
-        private async Task DoDeserializeRequest(string json, HttpClient client, Uri uri)
+        private async Task DoDeserializeRequest(string json, HttpClient client)
         {
+            var uri = new Uri(HttpsLocalhost + "mvc/DeserializeThousandSmallClassList");
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             var result = await client.PostAsync(uri, content);
             result.Dispose();
         }
 
-        private async Task DoSerializeRequest(HttpClient client, Uri uri)
+        private async Task DoSerializeRequest(HttpClient client)
         {
+            var uri = HttpsLocalhost + "mvc/SerializeThousandSmallClassList";
             var result = await client.GetAsync(uri);
             result.Dispose();
         }
