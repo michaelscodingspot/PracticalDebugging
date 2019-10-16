@@ -165,7 +165,7 @@ deserialize from string, Dictionary
 
 
 
-Deserialize small class - # requests / second :
+Deserialize 1000 item list of SmallClass - # requests / second :
 
 A>Each test was run several times. The edge cases were dismissed and average taken
 
