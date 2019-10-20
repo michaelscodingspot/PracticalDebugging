@@ -2,8 +2,10 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:PracticalDebugingDemos"
+             xmlns:sys="clr-namespace:System"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Thickness x:Key="RegMargin" 
+                   Left="5" Top="5" Right="5" Bottom="5" />
     </Application.Resources>
 </Application>
