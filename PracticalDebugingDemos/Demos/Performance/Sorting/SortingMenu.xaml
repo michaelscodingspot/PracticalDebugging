@@ -25,6 +25,7 @@
         <ComboBox x:Name="sortStrategy" SelectedIndex="0">
             <ComboBox.Items>
                 <ComboBoxItem>Bubble</ComboBoxItem>
+                <ComboBoxItem>Quick Sort</ComboBoxItem>
             </ComboBox.Items>
         </ComboBox>
         <TextBlock>Items:</TextBlock>

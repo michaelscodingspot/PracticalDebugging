@@ -58,7 +58,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Demos\CPUBound\Sorting\SortingMenu.xaml">
+    <Page Include="Demos\Performance\Sorting\SortingMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -70,12 +70,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Demos\CPUBound\Sorting.cs" />
-    <Compile Include="Demos\CPUBound\Sorting\ISortingStrategy.cs" />
-    <Compile Include="Demos\CPUBound\Sorting\SortingMenu.xaml.cs">
+    <Compile Include="Demos\Performance\Sorting.cs" />
+    <Compile Include="Demos\Performance\Sorting\QuickSort.cs" />
+    <Compile Include="Demos\Performance\Sorting\ISortingStrategy.cs" />
+    <Compile Include="Demos\Performance\Sorting\SortingMenu.xaml.cs">
       <DependentUpon>SortingMenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Demos\CPUBound\Sorting\Bubble.cs" />
+    <Compile Include="Demos\Performance\Sorting\Bubble.cs" />
     <Compile Include="Demos\Crashes\SimpleCrash.cs" />
     <Compile Include="Demos\Files\ReadOneFile.cs" />
     <Compile Include="Demos\Memory\EndlessMemory2.cs" />

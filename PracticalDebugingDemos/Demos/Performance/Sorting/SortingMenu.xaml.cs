@@ -43,6 +43,9 @@ namespace PracticalDebugingDemos.Demos.CPUBound
             ISortingStrategy s;
             switch (sortStrategy.Text)
             {
+                case "Quick Sort":
+                    s = new QuickSort();
+                    break;
                 case "Bubble":
                 default:
                     s = new Bubble();
