@@ -86,7 +86,7 @@ Serialize to Stream, Big class
 
 | Method                        |     Mean |     Error |    StdDev |
 | ----------------------------- | -------: | --------: | --------: |
-| RunSystemTextJson             |       NA |        NA |        NA |
+| RunSystemTextJson             | 5.200 us | 0.1072 us | 0.0951 us |
 | RunNewtonsoft                 | 5.124 us | 0.1003 us | 0.1909 us |
 | RunDataContractJsonSerializer | 7.236 us | 0.1158 us | 0.0967 us |
 | RunJil                        | 1.902 us | 0.0338 us | 0.0316 us |
@@ -97,7 +97,7 @@ Serialize to Stream, List
 
 | Method                        |      Mean |     Error |    StdDev |
 | ----------------------------- | --------: | --------: | --------: |
-| RunSystemTextJson             |        NA |        NA |        NA |
+| RunSystemTextJson             | 747.09 us | 15.022 us | 16.071 us |
 | RunNewtonsoft                 | 754.59 us | 14.855 us | 14.590 us |
 | RunDataContractJsonSerializer | 738.27 us |  8.391 us |  7.438 us |
 | RunJil                        | 130.65 us |  2.555 us |  3.824 us |
@@ -108,12 +108,16 @@ Serialize to stream, Dictionary
 
 | Method                        |       Mean |     Error |    StdDev |
 | ----------------------------- | ---------: | --------: | --------: |
-| RunSystemTextJson             |         NA |        NA |        NA |
+| RunSystemTextJson             |     962 us |  20.10 us | 18.891 us |
 | RunNewtonsoft                 |   771.1 us |  8.019 us |  7.501 us |
 | RunDataContractJsonSerializer | 1,306.3 us | 14.834 us | 13.876 us |
 | RunJil                        |   215.7 us |  2.026 us |  1.895 us |
 | RunUtf8Json                   |   192.6 us |  2.889 us |  2.255 us |
 | RunServiceStack               |   539.9 us |  5.332 us |  4.453 us |
+
+
+
+
 
 
 
