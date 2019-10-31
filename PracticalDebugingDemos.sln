@@ -9,7 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticalDebuggingWeb", "Pr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benchmarks", "Benchmarks\Benchmarks.csproj", "{92BCA2A8-81C2-4572-8EE4-5244CEB2FA0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarksServerDotNetCore3", "BenchmarksServerDotNetCore3\BenchmarksServerDotNetCore3.csproj", "{F4DE9B2D-9850-40DB-B25C-6771567D69A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenchmarksServerDotNetCore3", "BenchmarksServerDotNetCore3\BenchmarksServerDotNetCore3.csproj", "{F4DE9B2D-9850-40DB-B25C-6771567D69A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{B6CE174B-4020-42B7-97BD-014CC373694C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotnetCore3", "DotnetCore3", "{F872A68D-58A4-4704-A801-28CAC5B8959A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddingNumbersInParallel", "AddingNumbersInParallel\AddingNumbersInParallel.csproj", "{94DC722C-D7A1-474E-B504-DBC615637494}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingStrategies", "SortingStrategies\SortingStrategies.csproj", "{3246BCC5-3AC2-4912-9EF3-C4871A7BA368}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +41,22 @@ Global
 		{F4DE9B2D-9850-40DB-B25C-6771567D69A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4DE9B2D-9850-40DB-B25C-6771567D69A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4DE9B2D-9850-40DB-B25C-6771567D69A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94DC722C-D7A1-474E-B504-DBC615637494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94DC722C-D7A1-474E-B504-DBC615637494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94DC722C-D7A1-474E-B504-DBC615637494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94DC722C-D7A1-474E-B504-DBC615637494}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3246BCC5-3AC2-4912-9EF3-C4871A7BA368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3246BCC5-3AC2-4912-9EF3-C4871A7BA368}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3246BCC5-3AC2-4912-9EF3-C4871A7BA368}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3246BCC5-3AC2-4912-9EF3-C4871A7BA368}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F872A68D-58A4-4704-A801-28CAC5B8959A} = {B6CE174B-4020-42B7-97BD-014CC373694C}
+		{94DC722C-D7A1-474E-B504-DBC615637494} = {F872A68D-58A4-4704-A801-28CAC5B8959A}
+		{3246BCC5-3AC2-4912-9EF3-C4871A7BA368} = {F872A68D-58A4-4704-A801-28CAC5B8959A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9E734F5B-9FA6-4F06-9322-210738A39328}
