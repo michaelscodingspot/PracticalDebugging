@@ -70,6 +70,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Demos\Performance\AddInParallel.cs" />
     <Compile Include="Demos\Performance\Sorting.cs" />
     <Compile Include="Demos\Performance\Sorting\QuickSort.cs" />
     <Compile Include="Demos\Performance\Sorting\ISortingStrategy.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Demos\PerformanceCountersConsume\PerformanceCountersConsume.cs" />
     <Compile Include="Demos\PerformanceCountersThreeCpuThreads\PerformanceCountersThreeCPUThreads.cs" />
     <Compile Include="DemoBase.cs" />
+    <Compile Include="Demos\Performance\ThreadsWaiting.cs" />
     <Compile Include="MainViewModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
