@@ -38,6 +38,12 @@
     <Reference Include="MVVMC, Version=1.1.8.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Wpf.MVVMC.1.1.8\lib\net45\MVVMC.dll</HintPath>
     </Reference>
+    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.2.9.0\lib\net46\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.File, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.File.4.1.0\lib\net45\Serilog.Sinks.File.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -71,6 +77,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Demos\Performance\AddInParallel.cs" />
+    <Compile Include="Demos\Performance\LongSynchronousFileRead.cs" />
+    <Compile Include="Demos\Performance\LongAsyncNetworkRequest.cs" />
+    <Compile Include="Demos\Performance\LongSynchronousNetworkRequest.cs" />
+    <Compile Include="Demos\Performance\ManyExceptions.cs" />
     <Compile Include="Demos\Performance\Sorting.cs" />
     <Compile Include="Demos\Performance\Sorting\QuickSort.cs" />
     <Compile Include="Demos\Performance\Sorting\ISortingStrategy.cs" />
@@ -91,6 +101,7 @@
     <Compile Include="Demos\PerformanceCountersConsume\PerformanceCountersConsume.cs" />
     <Compile Include="Demos\PerformanceCountersThreeCpuThreads\PerformanceCountersThreeCPUThreads.cs" />
     <Compile Include="DemoBase.cs" />
+    <Compile Include="Demos\Performance\ThreadsWaitingAutoResetEvent.cs" />
     <Compile Include="Demos\Performance\ThreadsWaiting.cs" />
     <Compile Include="MainViewModel.cs" />
     <Compile Include="MainWindow.xaml.cs">

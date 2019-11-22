@@ -32,6 +32,12 @@ namespace PracticalDebugingDemos
             set { _content = value; OnPropertyChanged();}
         }
 
+        public void ClearContent()
+        {
+            Content = null;
+        }
+
+
         public void AppendTextToContent(object text)
         {
             if (Content == null)

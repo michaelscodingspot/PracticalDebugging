@@ -13,6 +13,7 @@ namespace PracticalDebugingDemos.Demos.Files
         {
             var files = Directory.GetFiles(@"C:\Windows");
             ReadFirstFile(files);
+            AppendTextToContent("Finished");
         }
 
         private void ReadFirstFile(string[] files)

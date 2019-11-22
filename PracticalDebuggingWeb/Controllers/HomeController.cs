@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using PracticalDebuggingWeb.Models;
+using Serilog;
 
 namespace PracticalDebuggingWeb.Controllers
 {
@@ -12,11 +14,28 @@ namespace PracticalDebuggingWeb.Controllers
     {
         public IActionResult Index()
         {
+            Log.Information("Home/Index");
             return View();
+        }
+
+        public async Task<IActionResult> LongRunning()
+        {
+            await Task.Delay(15000);
+            return Ok();
         }
 
         public IActionResult Privacy()
         {
+            return View();
+        }
+
+        public IActionResult Crash()
+        {
+            ThreadPool.QueueUserWorkItem((s) =>
+            {
+                Thread.Sleep(1500);
+                throw new Exception("Let's crash this party");
+            });
             return View();
         }
 

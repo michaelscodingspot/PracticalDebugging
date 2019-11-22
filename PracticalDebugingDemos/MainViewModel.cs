@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Input;
 using MVVMC;
+using Serilog;
 
 namespace PracticalDebugingDemos
 {
@@ -31,6 +32,7 @@ namespace PracticalDebugingDemos
 
         public MainViewModel()
         {
+            Log.Information("Starting MainViewModel");
             PopulateComboBox();
         }
 
@@ -71,6 +73,7 @@ namespace PracticalDebugingDemos
                 {
                     _goCommand = new DelegateCommand(() =>
                     {
+                        SelectedDemo.ClearContent();
                         SelectedDemo.Start();
                         ActiveDemo = SelectedDemo;
                     });
