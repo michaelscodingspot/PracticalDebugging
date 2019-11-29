@@ -33,6 +33,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MVVMC, Version=1.1.8.0, Culture=neutral, processorArchitecture=MSIL">
@@ -76,6 +77,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Demos\Freezes\CpuBoundFreeze.cs" />
+    <Compile Include="Demos\Freezes\DispatcherQueueDeadlock.cs" />
+    <Compile Include="Demos\Freezes\DoubleNetstedDeadlock.cs" />
+    <Compile Include="Demos\Freezes\IOBoundFreeze.cs" />
+    <Compile Include="Demos\Freezes\DotResultDeadlock.cs" />
     <Compile Include="Demos\Performance\AddInParallel.cs" />
     <Compile Include="Demos\Performance\LongSynchronousFileRead.cs" />
     <Compile Include="Demos\Performance\LongAsyncNetworkRequest.cs" />

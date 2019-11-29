@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28803.156
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticalDebugingDemos", "PracticalDebugingDemos\PracticalDebugingDemos.csproj", "{3A0132C6-FB69-4403-BCE9-C592371DEA7C}"
 EndProject
@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotnetCore3", "DotnetCore3"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddingNumbersInParallel", "AddingNumbersInParallel\AddingNumbersInParallel.csproj", "{94DC722C-D7A1-474E-B504-DBC615637494}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingStrategies", "SortingStrategies\SortingStrategies.csproj", "{3246BCC5-3AC2-4912-9EF3-C4871A7BA368}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortingStrategies", "SortingStrategies\SortingStrategies.csproj", "{3246BCC5-3AC2-4912-9EF3-C4871A7BA368}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

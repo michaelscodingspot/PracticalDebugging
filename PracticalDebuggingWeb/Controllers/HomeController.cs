@@ -20,7 +20,7 @@ namespace PracticalDebuggingWeb.Controllers
 
         public async Task<IActionResult> LongRunning()
         {
-            await Task.Delay(15000);
+            await Task.Delay(45000);
             return Ok();
         }
 
