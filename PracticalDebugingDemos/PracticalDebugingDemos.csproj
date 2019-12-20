@@ -39,6 +39,10 @@
     <Reference Include="MVVMC, Version=1.1.8.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Wpf.MVVMC.1.1.8\lib\net45\MVVMC.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
       <HintPath>..\packages\Serilog.2.9.0\lib\net46\Serilog.dll</HintPath>
     </Reference>
@@ -77,6 +81,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Demos\Debug3rdPartyCode\NewtonsoftDeserialize.cs" />
+    <Compile Include="Demos\Debug3rdPartyCode\NewtonsoftSerialize.cs" />
     <Compile Include="Demos\Freezes\CpuBoundFreeze.cs" />
     <Compile Include="Demos\Freezes\DispatcherQueueDeadlock.cs" />
     <Compile Include="Demos\Freezes\DoubleNetstedDeadlock.cs" />
@@ -109,6 +115,8 @@
     <Compile Include="DemoBase.cs" />
     <Compile Include="Demos\Performance\ThreadsWaitingAutoResetEvent.cs" />
     <Compile Include="Demos\Performance\ThreadsWaiting.cs" />
+    <Compile Include="Demos\VisualStudio\MultiThreadedCounter.cs" />
+    <Compile Include="Demos\VisualStudio\ParallelWatchExample.cs" />
     <Compile Include="MainViewModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -142,5 +150,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
