@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PracticalDebugingDemos"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Padding="5">
+        Title="Practical Debugging for .NET Developers" Height="450" Width="800" Padding="5">
     <Window.DataContext><local:MainViewModel/> </Window.DataContext>
 
     <Grid>
@@ -13,13 +13,15 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid Background="Beige" >
+        <Grid Background="#50d890" >
             <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center">
                 <TextBlock Margin="5" VerticalAlignment="Center">Choose: </TextBlock>
                 <ComboBox Margin="5" ItemsSource="{Binding AllDemos, Mode=OneWay}" 
+                          Width="300"
                           Text="Choose a Demo..."
                           Focusable="False" IsEditable="True" IsReadOnly="True"
-                          SelectedItem="{Binding SelectedDemo}">
+                          SelectedItem="{Binding SelectedDemo}"
+                          MouseLeftButtonUp="ComboBox_MouseLeftButtonDown">
                     <ComboBox.GroupStyle>
                         <GroupStyle>
                             <GroupStyle.HeaderTemplate>
@@ -30,12 +32,12 @@
                         </GroupStyle>
                     </ComboBox.GroupStyle>
                     <ComboBox.ItemTemplate>
-                        <DataTemplate>
+                        <DataTemplate >
                             <TextBlock Text="{Binding Caption}"/>
                         </DataTemplate>
                     </ComboBox.ItemTemplate>
                 </ComboBox>
-                <Button Margin="5" Padding="2" Content="GO" Command="{Binding GoCommand}"/>
+                <Button Margin="5" Padding="10 2" Content="GO" Command="{Binding GoCommand}"/>
             </StackPanel>
 
         </Grid>

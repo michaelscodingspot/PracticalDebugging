@@ -25,5 +25,12 @@ namespace PracticalDebugingDemos
             InitializeComponent();
         }
 
+        private void ComboBox_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            ComboBox cmb = sender as ComboBox;// FindParent<ComboBox>(cp);
+            cmb.IsDropDownOpen = true;
+        }
+
     }
+
 }
