@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PracticalDebugingDemos
+namespace PracticalDebuggingDemos
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

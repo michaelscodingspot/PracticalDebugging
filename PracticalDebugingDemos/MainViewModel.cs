@@ -11,7 +11,7 @@ using System.Windows.Input;
 using MVVMC;
 using Serilog;
 
-namespace PracticalDebugingDemos
+namespace PracticalDebuggingDemos
 {
     public class MainViewModel : MVVMC.BaseViewModel
     {

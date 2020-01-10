@@ -1,9 +1,9 @@
-﻿<Window x:Class="PracticalDebugingDemos.MainWindow"
+﻿<Window x:Class="PracticalDebuggingDemos.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PracticalDebugingDemos"
+        xmlns:local="clr-namespace:PracticalDebuggingDemos"
         mc:Ignorable="d"
         Title="Practical Debugging for .NET Developers" Height="450" Width="800" Padding="5">
     <Window.DataContext><local:MainViewModel/> </Window.DataContext>

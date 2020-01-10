@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace PracticalDebugingDemos.Demos.PerformanceCountersThreeCPUThreads.PerformanceCountersConsume
+namespace PracticalDebuggingDemos.Demos.PerformanceCountersThreeCPUThreads.PerformanceCountersConsume
 {
     public class PerformanceCountersConsume : DemoBase
     {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PracticalDebugingDemos.Demos.CPUBound;
+using PracticalDebuggingDemos.Demos.CPUBound;
 
-namespace PracticalDebugingDemos.Demos.Performance
+namespace PracticalDebuggingDemos.Demos.Performance
 {
     public class Sorting : DemoBase
     {

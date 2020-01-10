@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Sign in";
+}
+<h1>@ViewData["Title"]</h1>
+
+<script>
+
+    function onClick() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "http://localhost:5000/Home/RunTest?testClassName=InvalidCastException_DoesNotGetExpectedTestBug", false);
+        xhttp.send();
+        
+    }
+</script>
+
+    <div class="imgcontainer">
+        <img src="https://i.pinimg.com/originals/95/35/11/95351130ba6b2980eface7271320a62a.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit" onclick="onClick()">Login</button>
+        <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+

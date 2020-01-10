@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PracticalDebugingDemos.Demos.VisualStudio
+namespace PracticalDebuggingDemos.Demos.VisualStudio
 {
     public class MultiThreadedCounter : DemoBase
     {

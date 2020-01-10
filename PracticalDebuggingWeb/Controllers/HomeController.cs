@@ -29,6 +29,11 @@ namespace PracticalDebuggingWeb.Controllers
             return View();
         }
 
+        public IActionResult SignIn()
+        {
+            return View();
+        }
+
         public IActionResult Crash()
         {
             ThreadPool.QueueUserWorkItem((s) =>

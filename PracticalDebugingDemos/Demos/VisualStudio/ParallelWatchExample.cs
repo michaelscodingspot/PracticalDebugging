@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PracticalDebugingDemos.Demos.VisualStudio
+namespace PracticalDebuggingDemos.Demos.VisualStudio
 {
     public class ParallelWatchExample : DemoBase
     {

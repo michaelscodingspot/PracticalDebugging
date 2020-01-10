@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using Serilog;
 
-namespace PracticalDebugingDemos
+namespace PracticalDebuggingDemos
 {
     /// <summary>
     /// Interaction logic for App.xaml

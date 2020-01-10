@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PracticalDebugingDemos.Demos.Crashes
+namespace PracticalDebuggingDemos.Demos.Crashes
 {
     public class SimpleCrash : DemoBase
     {

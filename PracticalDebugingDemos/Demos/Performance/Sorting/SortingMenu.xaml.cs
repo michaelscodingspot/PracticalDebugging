@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PracticalDebugingDemos.Demos.CPUBound
+namespace PracticalDebuggingDemos.Demos.CPUBound
 {
     /// <summary>
     /// Interaction logic for SortingMenu.xaml

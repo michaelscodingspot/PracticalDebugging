@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PracticalDebugingDemos.Demos.Performance
+namespace PracticalDebuggingDemos.Demos.Performance
 {
     class ThreadsWaitingAutoResetEvent : DemoBase
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PracticalDebugingDemos.Demos.Files
+namespace PracticalDebuggingDemos.Demos.Files
 {
     public class ReadOneFile : DemoBase
     {

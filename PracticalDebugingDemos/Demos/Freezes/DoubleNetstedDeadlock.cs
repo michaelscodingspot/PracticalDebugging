@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PracticalDebugingDemos.Demos.Freezes
+namespace PracticalDebuggingDemos.Demos.Freezes
 {
     public class DoubleNetstedDeadlock : DemoBase
     {

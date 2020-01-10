@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PracticalDebugingDemos.Demos.Performance
+namespace PracticalDebuggingDemos.Demos.Performance
 {
     public class ManyExceptions : DemoBase
     {

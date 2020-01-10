@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PracticalDebugingDemos.Demos.CPUBound
+namespace PracticalDebuggingDemos.Demos.CPUBound
 {
     public class QuickSort : ISortingStrategy
     {

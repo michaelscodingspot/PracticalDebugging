@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PracticalDebugingDemos.Demos.Misc
+namespace PracticalDebuggingDemos.Demos.Misc
 {
     public class Break : DemoBase
     {

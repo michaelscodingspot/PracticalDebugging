@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PracticalDebugingDemos.Demos.Performance
+namespace PracticalDebuggingDemos.Demos.Performance
 {
     class LongSynchronousNetworkRequest : DemoBase
     {

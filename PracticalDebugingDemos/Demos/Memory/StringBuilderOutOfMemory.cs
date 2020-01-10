@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PracticalDebugingDemos.Demos.Memory
+namespace PracticalDebuggingDemos.Demos.Memory
 {
     public class StringBuilderOutOfMemory : DemoBase
     {

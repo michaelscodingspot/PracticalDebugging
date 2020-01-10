@@ -1,4 +1,4 @@
-﻿namespace PracticalDebugingDemos.Demos.CPUBound
+﻿namespace PracticalDebuggingDemos.Demos.CPUBound
 {
     public interface ISortingStrategy
     {

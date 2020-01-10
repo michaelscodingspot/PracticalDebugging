@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PracticalDebugingDemos.Demos.Debug3rdPartyCode
+namespace PracticalDebuggingDemos.Demos.Debug3rdPartyCode
 {
     public class NewtonsoftDeserialize : DemoBase
     {

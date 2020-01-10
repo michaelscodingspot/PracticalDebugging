@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.902
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticalDebugingDemos", "PracticalDebugingDemos\PracticalDebugingDemos.csproj", "{3A0132C6-FB69-4403-BCE9-C592371DEA7C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticalDebuggingDemos", "PracticalDebugingDemos\PracticalDebuggingDemos.csproj", "{3A0132C6-FB69-4403-BCE9-C592371DEA7C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticalDebuggingWeb", "PracticalDebuggingWeb\PracticalDebuggingWeb.csproj", "{548832B4-08D3-4D7A-806A-FA0C90D47028}"
 EndProject
@@ -18,6 +18,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddingNumbersInParallel", "AddingNumbersInParallel\AddingNumbersInParallel.csproj", "{94DC722C-D7A1-474E-B504-DBC615637494}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortingStrategies", "SortingStrategies\SortingStrategies.csproj", "{3246BCC5-3AC2-4912-9EF3-C4871A7BA368}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotnetFramework47", "DotnetFramework47", "{4EDFFED6-E555-442C-AB16-C019E439519E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{4BBEF579-7C0B-4F02-A63C-2AB6C143593F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,10 @@ Global
 		{3246BCC5-3AC2-4912-9EF3-C4871A7BA368}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3246BCC5-3AC2-4912-9EF3-C4871A7BA368}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3246BCC5-3AC2-4912-9EF3-C4871A7BA368}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BBEF579-7C0B-4F02-A63C-2AB6C143593F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BBEF579-7C0B-4F02-A63C-2AB6C143593F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BBEF579-7C0B-4F02-A63C-2AB6C143593F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BBEF579-7C0B-4F02-A63C-2AB6C143593F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +65,8 @@ Global
 		{F872A68D-58A4-4704-A801-28CAC5B8959A} = {B6CE174B-4020-42B7-97BD-014CC373694C}
 		{94DC722C-D7A1-474E-B504-DBC615637494} = {F872A68D-58A4-4704-A801-28CAC5B8959A}
 		{3246BCC5-3AC2-4912-9EF3-C4871A7BA368} = {F872A68D-58A4-4704-A801-28CAC5B8959A}
+		{4EDFFED6-E555-442C-AB16-C019E439519E} = {B6CE174B-4020-42B7-97BD-014CC373694C}
+		{4BBEF579-7C0B-4F02-A63C-2AB6C143593F} = {4EDFFED6-E555-442C-AB16-C019E439519E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9E734F5B-9FA6-4F06-9322-210738A39328}

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Timers;
 using Timer = System.Threading.Timer;
 
-namespace PracticalDebugingDemos.Demos.Memory
+namespace PracticalDebuggingDemos.Demos.Memory
 {
     public class TimerMemoryLeak : DemoBase
     {
@@ -21,10 +21,6 @@ namespace PracticalDebugingDemos.Demos.Memory
                 _demoBase = demoBase;
                 Timer timer = new Timer(HandleTick);
                 timer.Change(TimeSpan.FromSeconds(2), TimeSpan.FromSeconds(2));
-                //System.Timers.Timer timer2 = new System.Timers.Timer();
-                //timer2.Interval = 2000;
-                //timer2.Elapsed += (s, e) => HandleTick(null);
-                //timer2.Start();
             }
 
             private void HandleTick(object state)

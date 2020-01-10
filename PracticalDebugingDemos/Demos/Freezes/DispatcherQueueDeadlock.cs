@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
 
-namespace PracticalDebugingDemos.Demos.Freezes
+namespace PracticalDebuggingDemos.Demos.Freezes
 {
     public class DispatcherQueueDeadlock : DemoBase
     {

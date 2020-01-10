@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PracticalDebugingDemos.Properties
+namespace PracticalDebuggingDemos.Properties
 {
 
 

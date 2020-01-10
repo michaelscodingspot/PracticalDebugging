@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 
-namespace PracticalDebugingDemos.Demos.PerformanceCounters
+namespace PracticalDebuggingDemos.Demos.PerformanceCounters
 {
     public class PerformanceCountersThreeCpuThreads : DemoBase
     {
