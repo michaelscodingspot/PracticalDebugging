@@ -14,7 +14,7 @@ using Serilog;
 namespace PracticalDebuggingDemos
 {
     public class MainViewModel : MVVMC.BaseViewModel
-    {
+    { 
         public ObservableCollection<DemoBase> Demos { get;  } = new ObservableCollection<DemoBase>();
         public ListCollectionView _allDemos;
 

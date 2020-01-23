@@ -84,8 +84,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Demos\Crashes\Tools\TraceWriteLine.cs" />
+    <Compile Include="Demos\Crashes\Tools\DebugWriteLine.cs" />
     <Compile Include="Demos\Debug3rdPartyCode\NewtonsoftDeserialize.cs" />
     <Compile Include="Demos\Debug3rdPartyCode\NewtonsoftSerialize.cs" />
+    <Compile Include="Demos\Dumps\FirstChanceException.cs" />
     <Compile Include="Demos\Freezes\CpuBoundFreeze.cs" />
     <Compile Include="Demos\Freezes\DispatcherQueueDeadlock.cs" />
     <Compile Include="Demos\Freezes\DoubleNetstedDeadlock.cs" />
