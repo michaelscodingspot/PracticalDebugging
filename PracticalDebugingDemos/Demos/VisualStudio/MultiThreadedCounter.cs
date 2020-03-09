@@ -14,9 +14,9 @@ namespace PracticalDebuggingDemos.Demos.VisualStudio
         public override void Start()
         {
             _counter = 1;
-            Task.Run(IncreaseCounter);
-            Task.Run(DoubleCounter);
-            Task.Run(LogCounter);
+            Task.Run((Action)IncreaseCounter);
+            Task.Run((Action)DoubleCounter);
+            Task.Run((Action)LogCounter);
 
         }
 

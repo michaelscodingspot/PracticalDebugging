@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PracticalDebugingDemos.Demos.Memory;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,34 +14,15 @@ namespace PracticalDebuggingDemos.Demos.Memory
         public static StockMarketManager Manager = new StockMarketManager();
         public override void Start()
         {
-            var actionWindow = new StockActionWindow(Manager);
-            actionWindow.DoSomething();
-            // actionWindow is not used again
+            var actionWindow = new StockMarketWindow(Manager);
+            actionWindow.Show();
         }
     }
 
-    public class StockActionWindow
-    {
-        public StockActionWindow(StockMarketManager manager)
-        {
-            manager.StockChanged += OnStockChanged;
-        }
-
-        private void OnStockChanged(StockChangeEvent obj)
-        {
-            // ...
-        }
-
-        public void DoSomething()
-        {
-
-        }
-    }
 
     public class StockMarketManager
     {
         public event Action<StockChangeEvent> StockChanged;
-        // ...
     }
 
     public class StockChangeEvent

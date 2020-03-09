@@ -1,0 +1,43 @@
+﻿<Window x:Class="PracticalDebugingDemos.Demos.Memory.StockMarketWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PracticalDebugingDemos.Demos.Memory"
+        mc:Ignorable="d"
+        x:Name="stockActionWindow"
+        Title="StockActionWindow" Height="350" Width="600">
+    <StackPanel>
+        <ItemsControl ItemsSource="{Binding Stocks, ElementName=stockActionWindow}" Width="220" Margin="10" HorizontalAlignment="Left">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="DimGray" BorderThickness="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Margin="10" Text="{Binding Name}" FontSize="14" Foreground="Black"/>
+                            <TextBlock Grid.Row="0" Grid.Column="1" Margin="10" Text="{Binding Price}" FontSize="14">
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="Foreground" Value="Green"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsUp}" Value="False">
+                                                <Setter Property="Foreground" Value="Red"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+
+        </ItemsControl>
+
+    </StackPanel>
+</Window>

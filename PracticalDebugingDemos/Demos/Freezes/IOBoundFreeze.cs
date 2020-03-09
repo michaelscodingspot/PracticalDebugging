@@ -13,9 +13,9 @@ namespace PracticalDebuggingDemos.Demos.Freezes
     {
         public override void Start()
         {
-            var url = "http://localhost:60260/Home/LongRunning";
+            var url = "http://localhost:60258/Home/LongRunning";
             HttpWebRequest request = WebRequest.CreateHttp(url);
-            request.Method = "GET"; // or "POST", "PUT", "PATCH", "DELETE", etc.
+            request.Method = "GET"; 
             using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
             {
                 using (Stream responseStream = response.GetResponseStream())

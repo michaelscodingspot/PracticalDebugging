@@ -72,6 +72,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Demos\Freezes\OddEven\OddEvenMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Demos\Memory\StockMarketWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Demos\Performance\Sorting\SortingMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -89,11 +97,20 @@
     <Compile Include="Demos\Debug3rdPartyCode\NewtonsoftDeserialize.cs" />
     <Compile Include="Demos\Debug3rdPartyCode\NewtonsoftSerialize.cs" />
     <Compile Include="Demos\Dumps\FirstChanceException.cs" />
+    <Compile Include="Demos\Freezes\OddEvenFreeze.cs" />
     <Compile Include="Demos\Freezes\CpuBoundFreeze.cs" />
     <Compile Include="Demos\Freezes\DispatcherQueueDeadlock.cs" />
     <Compile Include="Demos\Freezes\DoubleNetstedDeadlock.cs" />
     <Compile Include="Demos\Freezes\IOBoundFreeze.cs" />
     <Compile Include="Demos\Freezes\DotResultDeadlock.cs" />
+    <Compile Include="Demos\Freezes\OddEven\OddEvenCounter.cs" />
+    <Compile Include="Demos\Freezes\OddEven\OddEvenMenu.xaml.cs">
+      <DependentUpon>OddEvenMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\Memory\StockMarketWindow.xaml.cs">
+      <DependentUpon>StockMarketWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\Performance\CountPrimes.cs" />
     <Compile Include="Demos\Performance\AddInParallel.cs" />
     <Compile Include="Demos\Performance\LongSynchronousFileRead.cs" />
     <Compile Include="Demos\Performance\LongAsyncNetworkRequest.cs" />

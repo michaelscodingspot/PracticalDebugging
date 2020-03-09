@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,10 +14,10 @@ namespace PracticalDebuggingDemos.Demos.Debug3rdPartyCode
             public int Age { get; set; }
         }
 
-public override void Start()
-{
-    var serialized = "{\"Nadsafsdfds"; 
-    Person deserialized = JsonConvert.DeserializeObject<Person>(serialized);
-}
+        public override void Start()
+        {
+            var serialized = "{\"Nadsafsdfds";
+            Person deserialized = Newtonsoft.Json.JsonConvert.DeserializeObject<Person>(serialized);
+        }
     }
 }

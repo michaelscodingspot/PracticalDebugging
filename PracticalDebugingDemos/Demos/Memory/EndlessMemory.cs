@@ -2,26 +2,38 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace PracticalDebuggingDemos.Demos.Memory
 {
+    public class ValuesHolder
+    {
+        public ValuesHolder()
+        {
+
+        }
+        public List<double[]> Values { get; set; } = new List<double[]>();
+    }
+
     public class EndlessMemory : DemoBase
     {
-        List<Double> values = new List<Double>();
-        public static List<double[]> big= new List<double[]>();
+        public static ValuesHolder ValuesHolder = new ValuesHolder();
+        private static Random rnd = new Random();
 
         public override void Start()
         {
             try
             {
-                for (int i = 0; i < 100000000; i++)
+                ClearContent();
+                AppendTextToContent("Start calculating...");
+                Task.Run((Action)Calc).ContinueWith((s) =>
                 {
-                    big.Add(GetData());
+                    var mean = GetMean();
+                    AppendTextToContent($"Mean is: {mean}");
+                }, TaskScheduler.FromCurrentSynchronizationContext());
 
-                }
-                // Compute mean.
-                
+
             }
             catch (Exception e)
             {
@@ -31,27 +43,41 @@ namespace PracticalDebuggingDemos.Demos.Memory
 
         }
 
-        
+        private void Calc()
+        {
+            for (int i = 0; i < 1000; i++)
+            {
+                ValuesHolder.Values.Add(GetData());
+                Thread.Sleep(2);
+
+            }
+        }
 
         private Double[] GetData()
         {
-            Random rnd = new Random();
-            for (long ctr = 1; ctr <= 200000000; ctr++) {
+            List<Double> values = new List<Double>();
+
+            for (long ctr = 1; ctr <= 10000; ctr++) 
+            {
                 values.Add(rnd.NextDouble());
-                if (ctr % 10000000 == 0)
-                    AppendTextToContent("Retrieved {0:N0} items of data.",
-                        ctr);
             }
             return values.ToArray();
         }
 
-        private static Double GetMean(Double[] values)
+        private static Double GetMean()
         {
+            int count = 0;
             Double sum = 0;
-            foreach (var value in values)
-                sum += value;
+            foreach (var numbers in ValuesHolder.Values)
+            {
+                foreach (var num in numbers)
+                {
+                    count++;
+                    sum += num;
+                }
+            }
 
-            return sum / values.Length;
+            return sum / count;
         }
     }
 }
