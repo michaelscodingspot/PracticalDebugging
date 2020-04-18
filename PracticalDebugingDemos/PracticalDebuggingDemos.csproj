@@ -97,6 +97,7 @@
     <Compile Include="Demos\Debug3rdPartyCode\NewtonsoftDeserialize.cs" />
     <Compile Include="Demos\Debug3rdPartyCode\NewtonsoftSerialize.cs" />
     <Compile Include="Demos\Dumps\FirstChanceException.cs" />
+    <Compile Include="Demos\Freezes\BeginInvokeFreeze.cs" />
     <Compile Include="Demos\Freezes\OddEvenFreeze.cs" />
     <Compile Include="Demos\Freezes\CpuBoundFreeze.cs" />
     <Compile Include="Demos\Freezes\DispatcherQueueDeadlock.cs" />
