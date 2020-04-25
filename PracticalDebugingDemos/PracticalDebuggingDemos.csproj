@@ -108,6 +108,8 @@
     <Compile Include="Demos\Freezes\OddEven\OddEvenMenu.xaml.cs">
       <DependentUpon>OddEvenMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Demos\Memory\ManyAllocationsGCPressureGen1Pressure.cs" />
+    <Compile Include="Demos\Memory\ManyAllocationsGCPressureGen0Pressure.cs" />
     <Compile Include="Demos\Memory\StockMarketWindow.xaml.cs">
       <DependentUpon>StockMarketWindow.xaml</DependentUpon>
     </Compile>
