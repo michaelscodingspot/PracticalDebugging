@@ -1,10 +1,5 @@
 ﻿using PracticalDebuggingDemos;
-using PracticalDebuggingDemos.Demos.Debug3rdPartyCode;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
+using PracticalDebuggingDemos.Demos.Models;
 using System.Threading.Tasks;
 
 namespace PracticalDebugingDemos.Demos.Memory

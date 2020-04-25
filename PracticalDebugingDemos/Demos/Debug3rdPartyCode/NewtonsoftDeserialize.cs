@@ -1,18 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PracticalDebuggingDemos.Demos.Models;
 
 namespace PracticalDebuggingDemos.Demos.Debug3rdPartyCode
 {
-    public class NewtonsoftDeserialize : DemoBase
+    public partial class NewtonsoftDeserialize : DemoBase
     {
-        class Person
-        {
-            public string Name { get; set; }
-            public int Age { get; set; }
-        }
 
         public override void Start()
         {

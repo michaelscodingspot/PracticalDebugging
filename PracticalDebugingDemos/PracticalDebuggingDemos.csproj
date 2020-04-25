@@ -96,6 +96,7 @@
     <Compile Include="Demos\Crashes\Tools\DebugWriteLine.cs" />
     <Compile Include="Demos\Debug3rdPartyCode\NewtonsoftDeserialize.cs" />
     <Compile Include="Demos\Debug3rdPartyCode\NewtonsoftSerialize.cs" />
+    <Compile Include="Demos\Models\Person.cs" />
     <Compile Include="Demos\Dumps\FirstChanceException.cs" />
     <Compile Include="Demos\Freezes\BeginInvokeFreeze.cs" />
     <Compile Include="Demos\Freezes\OddEvenFreeze.cs" />
