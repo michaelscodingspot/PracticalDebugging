@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PracticalDebugingDemos.Demos.Dumps
+namespace PracticalDebuggingDemos.Demos.Dumps
 {
     public class FirstChanceException : DemoBase
     {

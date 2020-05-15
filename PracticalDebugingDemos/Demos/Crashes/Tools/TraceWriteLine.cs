@@ -3,7 +3,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PracticalDebugingDemos.Demos.Crashes.Tools
+namespace PracticalDebuggingDemos.Demos.Crashes.Tools
 {
     public class TraceWriteLine : DemoBase
     {

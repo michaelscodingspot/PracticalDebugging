@@ -1,20 +1,7 @@
-﻿using PracticalDebuggingDemos.Demos.Memory;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
-namespace PracticalDebugingDemos.Demos.Memory
+namespace PracticalDebuggingDemos.Demos.Memory
 {
 
     public class Stock
@@ -31,7 +18,6 @@ namespace PracticalDebugingDemos.Demos.Memory
         public StockMarketWindow(StockMarketManager manager)
         {
             manager.StockChanged += OnStockChanged;
-            this.Closed += (s, e) => manager.StockChanged -= OnStockChanged;
 
             Stocks = new ObservableCollection<Stock>();
             Stocks.Add(new Stock()
@@ -83,8 +69,6 @@ namespace PracticalDebugingDemos.Demos.Memory
             get { return (ObservableCollection<Stock> )GetValue(StocksProperty); }
             set { SetValue(StocksProperty, value); }
         }
-
-        // Using a DependencyProperty as the backing store for Stocks.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty StocksProperty =
             DependencyProperty.Register("Stocks", typeof(ObservableCollection<Stock> ), typeof(StockMarketWindow), new PropertyMetadata());
 

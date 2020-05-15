@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PracticalDebugingDemos.Demos.Freezes.OddEven
+namespace PracticalDebuggingDemos.Demos.Freezes.OddEven
 {
     /// <summary>
     /// Interaction logic for OddEvenMenu.xaml

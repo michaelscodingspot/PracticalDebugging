@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace PracticalDebugingDemos.Demos.Freezes.OddEven
+namespace PracticalDebuggingDemos.Demos.Freezes.OddEven
 {
     internal class OddEvenCounter
     {

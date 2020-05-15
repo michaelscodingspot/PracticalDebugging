@@ -1,10 +1,9 @@
-﻿using PracticalDebuggingDemos;
-using PracticalDebuggingDemos.Demos.Models;
+﻿using PracticalDebuggingDemos.Demos.Models;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PracticalDebugingDemos.Demos.Memory
+namespace PracticalDebuggingDemos.Demos.Memory
 {
     public class ManyAllocationsGCPressureGen1Pressure : DemoBase
     {

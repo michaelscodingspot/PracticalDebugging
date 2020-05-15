@@ -2,7 +2,7 @@
 using PracticalDebuggingDemos.Demos.Models;
 using System.Threading.Tasks;
 
-namespace PracticalDebugingDemos.Demos.Memory
+namespace PracticalDebuggingDemos.Demos.Memory
 {
     public class ManyAllocationsGCPressureGen0Pressure : DemoBase
     {
