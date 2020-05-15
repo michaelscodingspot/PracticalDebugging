@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,9 +23,9 @@ namespace PracticalDebuggingDemos.Demos.CPUBound
         private void Quick_Sort(int[] arr, int left, int right) 
         {
             _countOperations++;
-            if (_countOperations % 10 == 0)
+            if (_countOperations % 50 == 0)
             {
-                System.Diagnostics.Trace.WriteLine($"Time elapsed seconds: {(DateTime.Now - _startTime).TotalSeconds}");
+                    WriteLog($"Time elapsed seconds: {(DateTime.Now - _startTime).TotalSeconds}");
             }
 
             if (left < right)
@@ -39,6 +40,12 @@ namespace PracticalDebuggingDemos.Demos.CPUBound
                 }
             }
         
+        }
+
+        private void WriteLog(string msg)
+        {
+            var file = Path.GetTempPath() + @"\PracticalDebugging\quick_sort.txt";
+            File.AppendAllLines(file, new string[] { msg });
         }
 
         private int Partition(int[] arr, int left, int right)

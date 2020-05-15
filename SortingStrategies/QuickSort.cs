@@ -19,7 +19,7 @@ namespace SortingStrategies
             _countOperations++;
             if (_countOperations % 10 == 0)
             {
-                System.Diagnostics.Trace.WriteLine($"Time elapsed seconds: {(DateTime.Now - _startTime).TotalSeconds}");
+                Console.WriteLine($"Time elapsed seconds: {(DateTime.Now - _startTime).TotalSeconds}");
             }
 
             if (left < right)

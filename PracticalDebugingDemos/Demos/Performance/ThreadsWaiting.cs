@@ -22,13 +22,13 @@ namespace PracticalDebuggingDemos.Demos.Performance
             }, TaskScheduler.FromCurrentSynchronizationContext());
         }
 
-        private static void ThreadOperation(object lock1, string threadName)
+        private void ThreadOperation(object lock1, string threadName)
         {
             for (int i = 0; i < 10; i++)
             {
                 lock (lock1)
                 {
-                    System.Diagnostics.Debug.WriteLine($"{threadName} is running iteration {i}");
+                    AppendTextToContent($"{threadName} is running iteration {i}");
                     Thread.Sleep(5000);
                 }
             }
