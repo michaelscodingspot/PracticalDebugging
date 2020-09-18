@@ -133,3 +133,31 @@ span.psw {
         width: 100%;
     }
 }
+
+.outerForm {
+    border: none;
+}
+
+form {
+    margin-left: 260px;
+    max-width: 600px;
+}
+
+form p {
+    text-align: left;
+    margin-bottom: 3px;
+    margin-top: 10px;
+}
+
+form span {
+    text-align: left !important;
+}
+
+.convertContainer {
+    display:block;
+    text-align: left;
+}
+
+
+
+

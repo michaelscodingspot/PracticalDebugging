@@ -2,7 +2,33 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <div class="text-center">
+        <h1 class="display-4">Price Calculator</h1>
+        <br />
+        <br />
+        <br />
+        <form id="paymentForm" action="/PriceCalculator/Calculate" method="post" class="outerForm">
+            <p>Price (USD)</p>
+            <input type="text" name="price" placeholder="0" />
+            <div class="convertContainer">
+                <span>Convert currency</span>
+
+                <select name="convertCurrency" id="cars">
+                    <option value="usd">USD</option>
+                    <option value="eur">EUR</option>
+                    <option value="gbp">GBP</option>
+                </select>
+            </div>
+
+            <p>Coupon code</p>
+            <input type="text" name="couponCode" placeholder="" />
+            <p>Additional Discount</p>
+            <input type="text" name="discount" placeholder="" />
+
+            <button type="submit" id="submit-button">Calculate</button>
+
+
+        </form>
+
+
+    </div>
