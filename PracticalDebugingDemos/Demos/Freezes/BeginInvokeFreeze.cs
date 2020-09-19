@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Threading;
 
@@ -16,11 +17,13 @@ namespace PracticalDebuggingDemos.Demos.Freezes
 
 private void A()
 {
+            Thread.Sleep(100);
     Dispatcher.CurrentDispatcher.BeginInvoke((Action)(() => B()));
 }
 
 private void B()
 {
+            Thread.Sleep(100);
     Dispatcher.CurrentDispatcher.BeginInvoke((Action)(() => A()));
 }
     }

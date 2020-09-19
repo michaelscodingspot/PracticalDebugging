@@ -119,6 +119,8 @@
     <Compile Include="Demos\Performance\LongSynchronousFileRead.cs" />
     <Compile Include="Demos\Performance\LongAsyncNetworkRequest.cs" />
     <Compile Include="Demos\Performance\LongSynchronousNetworkRequest.cs" />
+    <Compile Include="Demos\Performance\LazyInitialization.cs" />
+    <Compile Include="Demos\Performance\Memoization.cs" />
     <Compile Include="Demos\Performance\ManyExceptions.cs" />
     <Compile Include="Demos\Performance\Sorting.cs" />
     <Compile Include="Demos\Performance\Sorting\QuickSort.cs" />
