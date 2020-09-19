@@ -8,15 +8,20 @@
         <br />
         <br />
         <form id="paymentForm" action="/PriceCalculator/Calculate" method="post" class="outerForm">
-            <p>Price (USD)</p>
+            <p>Price</p>
             <input type="text" name="price" placeholder="0" />
             <div class="convertContainer">
-                <span>Convert currency</span>
-
-                <select name="convertCurrency" id="cars">
+                <span>Input currency</span>
+                <select name="inputCurrency" id="inputCurrency">
                     <option value="usd">USD</option>
-                    <option value="eur">EUR</option>
                     <option value="gbp">GBP</option>
+                    <option value="eur">EUR</option>
+                </select>
+                <span>Output currency</span>
+                <select name="outputCurrency" id="outputCurrency">
+                    <option value="usd">USD</option>
+                    <option value="gbp">GBP</option>
+                    <option value="eur">EUR</option>
                 </select>
             </div>
 
@@ -27,8 +32,6 @@
 
             <button type="submit" id="submit-button">Calculate</button>
 
-
         </form>
-
 
     </div>

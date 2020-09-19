@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PracticalDebuggingWeb.Controllers.Services
+namespace PracticalDebuggingWeb.Services
 {
     internal class CouponService
     {
@@ -21,8 +21,10 @@ namespace PracticalDebuggingWeb.Controllers.Services
             {
                 AutoResetEvent are = new AutoResetEvent(false);
                 double result = 0;
+                
                 ThreadPool.QueueUserWorkItem((_) => 
-                { 
+                {
+                    var someValue = 10;
                     var httpClient = HttpClientFactory.Create();
                     var res = httpClient.GetAsync("https://couponservice.com/api/Discount?couponCode=" + couponCode)
                                         .GetAwaiter().GetResult();

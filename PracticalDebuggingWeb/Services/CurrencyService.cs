@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PracticalDebuggingWeb.Controllers.Services
+namespace PracticalDebuggingWeb.Services
 {
     internal class CurrencyService
     {
