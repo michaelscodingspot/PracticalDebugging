@@ -21,20 +21,27 @@ namespace PracticalDebuggingWeb.Services
             {
                 AutoResetEvent are = new AutoResetEvent(false);
                 double result = 0;
-                
-                ThreadPool.QueueUserWorkItem((_) => 
+
+                ThreadPool.QueueUserWorkItem((_) =>
                 {
-                    var someValue = 10;
-                    var httpClient = HttpClientFactory.Create();
-                    var res = httpClient.GetAsync("https://couponservice.com/api/Discount?couponCode=" + couponCode)
-                                        .GetAwaiter().GetResult();
-                    var content = res.Content.ReadAsStringAsync().GetAwaiter().GetResult();
-                    result = double.Parse(content);
-                    are.Set();
+                    result = GetCouponDiscountInternal(couponCode, are);
                 });
                 are.WaitOne();
                 return result;
             }
+        }
+
+        private static double GetCouponDiscountInternal(string couponCode, AutoResetEvent are)
+        {
+            double result;
+            var someValue = 10;
+            var httpClient = HttpClientFactory.Create();
+            var res = httpClient.GetAsync("https://couponservice.com/api/Discount?couponCode=" + couponCode)
+                                .GetAwaiter().GetResult();
+            var content = res.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+            result = double.Parse(content);
+            are.Set();
+            return result;
         }
     }
 }
