@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Price Calculator</h1>
+    <br />
+    <br />
+    <br />
+    <form id="paymentForm" action="/PriceCalculator/Calculate" method="post" class="outerForm">
+        <p>Price</p>
+        <input type="text" name="price" placeholder="0" />
+        <div class="convertContainer">
+            <span>Input currency</span>
+            <select name="inputCurrency" id="inputCurrency">
+                <option value="usd">USD</option>
+                <option value="gbp">GBP</option>
+                <option value="eur">EUR</option>
+            </select>
+            <span>Output currency</span>
+            <select name="outputCurrency" id="outputCurrency">
+                <option value="usd">USD</option>
+                <option value="gbp">GBP</option>
+                <option value="eur">EUR</option>
+            </select>
+        </div>
+
+        <p>Coupon code</p>
+        <input type="text" name="couponCode" placeholder="" />
+        <p>Additional Discount</p>
+        <input type="text" name="discount" placeholder="" />
+
+        <button type="submit" id="submit-button">Calculate</button>
+
+    </form>
+
+</div>
